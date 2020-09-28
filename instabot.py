@@ -106,7 +106,7 @@ class Instabot:
             file.write(reponse.content)
             file.close()
             x += 1
-
+    #this is a heaper funtion used too go to a user's profile page
     def getuser(self,user):
         sleep(4)
         self.driver.get("https://instagram.com"+"/"+user)
