@@ -1,5 +1,5 @@
 ﻿# instabot
-This is an instagram bot that downlaods images
+This is an instagram bot that downloads images
 
 this code uses reqiures selenium and chromedriver to be installed
 
