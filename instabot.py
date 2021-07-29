@@ -73,14 +73,15 @@ class Instabot:
                 break
             last_height = new_height
             counter+=1
-            if counter % 1 is 0:
+            if counter % 1 == 0:
                 x = self.downloadimgs(counter,user,x,imgnames)
 
     #this function is used too download images after a scroll is made. it is a helper function for download user.
     def downloadimgs(self,counter,user,x,imgnames):
         imgname = user
-        allpics = self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/div[2]")
+        allpics = self.driver.find_element_by_xpath("//html/body/div[1]/section/main/div/div[3]")
         imgs = allpics.find_elements_by_tag_name("img")
+        print(allpics)
         print("downloading" + "  " + str(counter))
         for img in imgs:
             link = img.get_attribute("src")
@@ -92,6 +93,7 @@ class Instabot:
                 x += 1
             imgnames.append(link)
         return x
+        
     #this function will download all images currently loaded on the display
     def downloadloaded(self, user):
         self.getuser(user)
